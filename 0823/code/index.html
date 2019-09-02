@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>eason</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/public.css" />
+        <link rel="stylesheet" href="./css/swiper.min.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <!-- 页面头部 -->
+        <div id="header">
+            <div class="logo-box">
+                <a href="index.html" target="_blank">
+                    <img src="./images/logo.png" width="70" height="116"/>
+                </a>
+            </div>
+
+            <div class="head-nav">
+                <ul class="nav-box">
+                    <li><a href="">首页</a></li>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">首页</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 内容部分 -->
+        <div id="content">
+            <div class="banner swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="banner-box swiper-slide">
+                        <div class="box">
+                            <div class="banner-img">
+                                <img src="./images/banner.jpg" width="100%" height="670" alt="">
+                            </div>
+                            <div class="banner-text">
+                                <a href="">
+                                    <img src="./images/banner_text.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-box swiper-slide">
+                        <div class="box">
+                            <div class="banner-img">
+                                <img src="./images/oldman.jpg" width="100%" height="670" alt="">
+                            </div>
+                            <div class="banner-text">
+                                <a href="">
+                                    <img src="./images/banner_text.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-box swiper-slide">
+                        <div class="box">
+                            <div class="banner-img">
+                                <img src="./images/banner.jpg" width="100%" height="670" alt="">
+                            </div>
+                            <div class="banner-text">
+                                <a href="">
+                                    <img src="./images/banner_text.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 页脚(脚部) -->
+        <div id="footer"></div>
+
+
+
+
+
+        <script src="./js/swiper.min.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: {
+                    delay: 500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                loop: true,
+            })
+
+            //鼠标覆盖停止自动切换
+            mySwiper.el.onmouseover = function(){
+                mySwiper.autoplay.stop();
+            }
+
+            mySwiper.el.onmouseleave = (function(){
+                mySwiper.autoplay.start();
+            })
+        </script>
+    </body>            
+</html>

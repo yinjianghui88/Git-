@@ -1,0 +1,24 @@
+.banner{
+    height: 670px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.banner .banner-text{
+    width: 334px;
+    height: 266px;
+    position: absolute;
+    left: 236px;
+    top: 204px;
+}
+.banner .banner-text a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 分页器样式 */
+.swiper-pagination span{
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+}
