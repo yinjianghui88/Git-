@@ -1,0 +1,87 @@
+/* 清除浮动 */
+.clearfix{
+    clear: both; /*left right both*/
+}
+
+div[class^="box"]{
+    width: 200px;
+    height: 120px;
+    margin-bottom: 2px;
+}
+.box-1{
+    background-color: rgba(255,0,0,.7);
+    float: left;
+}
+.box-2{
+    background-color: #00f;
+    float: left;
+    opacity: .6;
+}
+
+/* 浮动 */
+.box-3{
+    background-color: #50f06f;
+    float: left;
+}
+.box-4{
+    background-color: #998f9f;
+    float: left;
+}
+
+.box-5{
+    background-color: #f00;
+    height: 100px;
+    float: left;
+}
+.box-6{
+    background-color: #ff0;
+    height: 80px;
+    float: left;
+}
+
+
+
+/* 外边距 */
+.box-7{
+    background-color: #2fe672;
+    /* margin-left: 20px;
+    margin-top: 18px;
+    margin-right: 22px;
+    margin-bottom: 4px; */
+    margin: 18px 22px 4px 20px; /*缩写方式 ： 上 右 下 左 顺时针方向  四个方向外边距值都不同*/
+}
+.box-8{
+    background-color: #cf83ad;
+    /* 外边距缩写  上下相同 左右相同  margin: 上下  左右 */
+    margin: 20px 40px;
+}
+.box-9{
+    background-color: #c8ca33;
+    /* 外边距缩写 上下不同 左右相同  margin: 上  左右  下 */
+    margin: 24px 30px 22px!important;
+}
+
+
+/* 内边距 */
+.box-10{
+    background-color: #ff0;
+    /* padding-top:10px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 20px; */
+    padding: 10px 20px 14px 18px; /*内边距缩写*/
+}
+
+.box-11{
+    background-color: #f9361a;
+    overflow: hidden; 
+    /*  1. 超出部分隐藏
+        2.解决子元素给上边距，父元素一起下移的问题 
+    */
+}
+.box-11 > .item-1{
+    width: 140px;
+    height: 80px;
+    background-color: #24c762;
+    margin: 20px auto;
+}
