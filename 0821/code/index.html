@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>title</title>
+        <link rel="stylesheet" href="./css/index.css"/>
+    </head>
+    <body>
+        <div class="flex-box1">
+            <div class="flex-item">align-items<br />test</div>
+            <div class="flex-item">align-items</div>
+            <div class="flex-item">align-items</div>
+            <div class="flex-item">align-items</div>
+        </div>
+        <br />
+
+        <ul class="nav">
+            <li><a href="">首页1</a></li>
+            <li><a href="">首页2</a></li>
+            <li><a href="">首页3</a></li>
+            <li><a href="">首页4</a></li>
+        </ul>
+        <!-- ul.nav>(li>a{内容})*4 -->
+
+
+        <!-- 固定定位 -->
+        <div class="pos-fixed">
+            <a href="javascript:;" id="close">X</a><br />
+            一刀999
+        </div>
+
+
+        <!-- 绝对定位情况一 父元素的position属性为static(或者没有写) 参照body绝对定位 -->
+        <div class="abs-1">
+            绝对定位情况一 父元素的position属性为static 参照body绝对定位
+        </div>
+        <div class="box-2">
+            <div class="abs-2">绝对定位 父元素的position属性为static</div>
+        </div>
+
+        <!-- 绝对定位情况二 父元素的position属性为relative 参照父元素绝对定位-->
+        <div class="box-3">
+            <div class="abs-3"></div>
+            <div class="abs-4"></div>
+        </div>
+
+        <!-- 相对定位 参照元素原来所处位置定位 不脱离文档流-->
+        <div class="pos-5">相对定位 参照元素原来所处位置定位 不脱离文档流</div>
+        <div class="pos-6"></div>
+        测试相对定位
+
+
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+        </pre>
+    </body>
+    <script>
+        var box = document.getElementsByClassName('pos-fixed')[0];
+        var btn = document.getElementById('close');
+
+        btn.onclick = function(){
+            box.style.display = 'none';
+        }
+    </script>
+</html>

@@ -1,0 +1,126 @@
+body{
+    border: 1px solid #000;
+    margin: 0;
+}
+
+/* 弹性盒子 align-items */
+.flex-box1{
+    width: 500px;
+    height: 300px;
+    background-color: #faa;
+    display: flex;
+    align-items: center;
+    /* baseline flex-start flex-end center stretch */
+}
+.flex-box1 > .flex-item{
+    width: 100px;
+    background-color: aqua;
+    margin: 10px;
+    font-style: oblique; /*normal italic oblique*/
+}
+
+/* 列表样式 */
+.nav{
+    list-style-type: none;
+    background-color: aquamarine;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav a{
+    color: #fff;
+    /* 文本装饰线条 none underline overline line-through*/
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    width: 60px;
+    background-color: #ccc;
+
+    text-align: center; /*水平方向对齐方式 left center right*/
+    line-height: 30px; /*行高 px %*/
+}
+
+
+/* 固定定位 position:fixed;
+   相对于浏览器窗口定位
+   通过 left、right、top、bottom属性确定位置
+
+   固定定位脱离文档流
+*/
+.pos-fixed{
+    width: 200px;
+    height: 400px;
+    background-color: #faa;
+
+    position: fixed;
+    right: 2px;
+    bottom: 100px;
+}
+/* 绝对定位情况一 父元素的position属性为static 参照body绝对定位 */
+.abs-1{
+    width: 300px;
+    height: 200px;
+    background-color: darkturquoise;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+.box-2{
+    width: 200px;
+    height: 140px;
+    background-color: #0f0;
+    position: static; /*默认，可以不写*/
+}
+.abs-2{
+    width: 160px;
+    height: 120px;
+    background-color: #f00;
+    position: absolute;
+    top: 40px;
+    left: 520px;
+}
+
+/* 绝对定位情况二 父元素的position属性为relative 参照父元素绝对定位 */
+.box-3{
+    width: 600px;
+    height: 400px;
+    background-color: deepskyblue;
+    position: relative;
+}
+.abs-3,
+.abs-4{
+    width: 200px;
+    height: 160px;
+    position: absolute; /*绝对定位*/
+}
+.abs-3{
+    background-color: #f00;
+    right: 0;
+    top: 10px;
+}
+.abs-4{
+    background-color: #ff0;
+    left: 110px;
+    bottom: 20px;
+}
+
+/* 相对定位 参照元素原来所处位置定位 不脱离文档流 */
+.pos-5{
+    width: 200px;
+    height: 200px;
+    background-color: #0ff;
+    position: relative;
+    left: 220px;
+    top: -30px;
+    z-index: 100; /*层叠关系*/
+}
+.pos-6{
+    width: 200px;
+    height: 200px;
+    background-color: #f0f;
+    position: relative;
+    left: 100px;
+    top: -180px;
+}
