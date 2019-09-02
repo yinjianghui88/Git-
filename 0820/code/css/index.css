@@ -1,0 +1,158 @@
+/*E:first-of-type 匹配同类型中的第一个同级兄弟元素E */
+.box-1 p:first-of-type{
+    color: red;
+}
+.box-1 p:last-of-type{
+    color: blue;
+}
+/* E:only-of-type 匹配同类型中的唯一的一个同级兄弟元素E */
+.box-1 span:only-of-type{
+    color: blueviolet;
+}
+/* E:empty 匹配没有任何子元素（包括text节点）的元素E */
+.box-1 div:empty{
+    width: 100px;
+    height: 20px;
+    background-color: brown;
+}
+/* E:checked */
+input[name="sex"]:checked + label{
+    color: #0f0;
+    font-weight: bold; /* 加粗 normal bold bolder */
+}
+
+/* 伪对象选择符 */
+/* E::first-letter 设置对象内的第一个字符的样式 */
+.para-1::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: '隶书';
+    color: red;
+}
+/* E::first-line 设置对象内的第一行的样式 */
+.para-1::first-line{
+    background-color: cyan;
+    line-height: 28px;/*行高*/
+}
+/* E::selection 设置对象被选中的样式 */
+.para-1::selection{
+    color: #0f0;
+    background-color: orange;
+}
+
+/* E::placeholder设置对象文字占位符的样式 */
+.place::placeholder{
+    color: cyan;
+    font-family: '宋体';
+}
+
+
+.about{
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+/* E::before E::after */
+/* .about::before{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #f00;
+    position: absolute;
+    top: 60%;
+    left: -30px;
+}
+.about::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #f00;
+    position: absolute;
+    top: 60%;
+    right: -30px;
+} */
+/* 群组选择符 选择符之间用 , 分割 */
+.about::before,
+.about::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #f00;
+    position: absolute;
+    top: 60%;
+}
+.about::before{
+    left: -30px;
+}
+.about::after{
+    right: -30px;
+}
+
+/* 弹性盒子 */
+.flex-box1{
+    width: 75%;
+    margin: 0 auto; /*居中*/
+    padding: 6px;
+    background-color: antiquewhite;
+    display: flex; /*弹性盒子*/
+    direction: ltr; /*排序方向 ltr rtl*/
+    justify-content: space-between;
+    /* flex-start flex-end center space-around space-between */
+}
+.flex-box1 > .flex-item{
+    width: 120px;
+    height: 30px;
+    background-color: #0f0;
+    border: 1px solid #f00;
+    box-sizing: border-box;
+}
+
+.flex-box2{
+    width: 800px;
+    margin: 0 auto;
+    padding: 6px;
+    background-color: antiquewhite;
+    display: flex; 
+    direction: ltr;
+    justify-content: space-between;
+    flex-wrap: wrap; /*nowrap*/
+}
+.flex-box2 > .flex-item{
+    width: 180px;
+    height: 30px;
+    background-color: #0f0;
+    border: 1px solid #f00;
+    box-sizing: border-box;
+}
+
+
+
+
+.flex-box3{
+    width: 75%;
+    margin: 0 auto;
+    padding: 6px;
+    background-color: antiquewhite;
+    display: flex;
+    direction: ltr;
+    justify-content: space-between;
+}
+.flex-box3 > .flex-item{
+    width: 120px;
+    height: 30px;
+    background-color: #f0f;
+    border: 1px solid #f00;
+    box-sizing: border-box;
+}
+/* 媒体查询 */
+@media screen and (max-width:1000px) and (min-width:600px){
+    .flex-box3{
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width:600px){
+    .flex-box3{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
