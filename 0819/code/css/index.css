@@ -1,0 +1,75 @@
+/* 通配选择符 */
+*{
+    color: blue;
+}
+
+/* 包含选择符 E F  E元素的所有后代元素F*/
+.list-1 li{
+    color: red;
+}
+/* 子选择符 E>F  E元素的所有子元素F */
+.list-2 > li{
+    color: green;
+}
+/* 兄弟选择符 E~F E元素后面的所有兄弟元素F*/
+.list-3 li:nth-child(2)~li{
+    list-style-type: lower-greek;
+    color: orange;
+}
+/* 相邻选择符 E+F E元素后面的相邻元素F*/
+.list-4 li:nth-last-child(3) + li{
+    color: red;
+    font-family: '宋体';
+}
+
+/* 伪类选择符 */
+/* E:hover 设置元素在其鼠标悬停时的样式 */
+div[class^="box"]{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 255);
+    margin-top: 3px;
+}
+.box-1{
+    /* 过渡属性 多个属性用空格隔开*/
+    transition-property: border-redius background-color transform;
+    /* 过渡(持续)时间 单位 m ms */
+    transition-duration: 1500ms;
+    /* 过渡时间函数 ease ease-in ease-out ease-in-out linear */
+    transition-timing-function: linear;
+    /* 过渡延迟 s ms */
+    transition-delay: .5s;
+}
+.box-1:hover{
+    /*变形样式 scale缩放  skew扭曲  rotate旋转 translate位移*/
+    transform: skew(45deg,-45deg)  translateX(300px)  rotate(720deg) scale(1.0); 
+    border-radius: 50%;
+    background-color: rgba(255,25,0,.5);
+}
+/* 设置元素在成为输入焦点
+(该元素的onfocus事件发生)时的样式 */
+.input-1:focus{
+    outline: none;
+    color: red;
+}
+/* E:not(s) 匹配不含有s选择符的元素E */
+div:not(.not){
+    border: 4px solid #0f0;
+}
+
+.list-5 li:nth-child(2n){
+    background-color: #0ff;
+}
+.list-5 li:nth-child(odd){
+    background-color: #f0f;
+}
+
+.list-6 li:nth-child(3n){
+    background-color: #f93f33;
+}
+.list-6 li:nth-child(3n-1){
+    background-color: #a93fff;
+}
+.list-6 li:nth-child(3n-2){
+    background-color: #a9f33d;
+}
