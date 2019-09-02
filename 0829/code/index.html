@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 设置编码 -->
+        <meta charset="utf-8" />
+        <title>wow.js</title>
+
+        <!-- 1. 加载css动画库 -->
+        <link rel="stylesheet" href="./css/animate.css" />
+        <!-- 加载css样式 -->
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <!-- 3. 显示动画效果 -->
+        <div class="box-1 wow shake">
+            wow.js + animate.css
+        </div>
+        <div class="box-2 wow bounce"></div>
+        <div class="box-3 wow fadeInDown"></div>
+        
+
+        <!-- Advanced Options -->
+        <div class="box-4 wow fadeInLeft" data-wow-duration="3s" data-wow-delay="1s">
+
+        </div>
+        <div class="box-5 wow shake" data-wow-duration="2s"  data-wow-offset="90" data-wow-iteration="4"></div>
+        <div class="box-6 wow fadeInRight" data-wow-duration="2s"  data-wow-offset="90"></div>
+<!-- 
+        选项配置
+        属性/方法	         说明	                                            默认值
+        boxClass	        需要执行动画的元素的class，字符串	                  'wow'
+        animateClass	    animation.css 动画的class，字符串	                 'animated'
+        data-wow-duration   持续时间(秒或毫秒 s/ms)                                           
+        data-wow-delay      延迟时间(秒或毫秒 s/ms)
+        data-wow-offset	    距离可视区域多少开始执行动画,整数（与浏览器底部相关）	  0
+        mobile	            是否在移动设备上执行动画，布尔值	                    true
+        live	            异步加载的内容是否有效，布尔值	                        true
+ -->
+
+
+
+        <!-- 2. 加载并激活wow.js -->
+        <script src="./js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </body>
+</html>
