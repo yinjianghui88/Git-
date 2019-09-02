@@ -1,0 +1,124 @@
+.ani-1{
+    width: 200px;
+    height: 120px;
+    background-color: #f9c;
+    /* 自定义动画名称 */
+    animation-name: LtR;
+    /* 动画持续时间 */
+    animation-duration: 2000ms;
+    /* 时间函数 ease ease-in ease-out ease-in-out linear*/
+    animation-timing-function: linear;
+    /* 延迟时间 */
+    animation-delay: 300ms;
+    /* 动画执行次数 */
+    animation-iteration-count: 4; /*infinite number*/
+    /* 动画的执行方向 */
+    animation-direction: alternate; /* normal reverse alternate alternate-reverse*/
+    /* 动画时间之外的状态 infinite无效 和动画执行次数有关系 */
+    animation-fill-mode: both; /* forwards backwards both */
+}
+.ani-1:hover{
+    /* 动画执行状态 */
+    animation-play-state: paused; /* running paused */
+}
+
+@keyframes LtR{
+    from{
+        transform: translateX(0px) rotate(0deg);
+        background-color: #ff99cc;
+    }
+    to{
+        transform: translateX(600px) rotate(720deg);
+        background-color: #ffd329cc;
+        border-radius: 20px;
+    }
+}
+
+
+.ani-2{
+    width: 120px;
+    height: 120px;
+    background-color: #f96;
+    margin-top: 30px;
+    animation: Square 4s linear 1 alternate;
+}
+@keyframes Square{
+    0%{}
+    25%{
+        transform: translateX(600px) rotate(360deg);
+        background-color: #f3372d;
+    }
+    50%{
+        transform: translate(600px,300px) rotate(720deg);
+        background-color: #7def32;
+    }
+    75%{
+        transform: translate(0,300px) rotate(1080deg);
+        background-color: #73e8e3;
+    }
+    100%{
+        transform: translate(0) rotate(1440deg);
+        background-color: #6326dd;
+    }
+}
+
+
+/* 线性渐变 */
+.gra-1{
+    width: 600px;
+    height: 160px;
+    background-image: linear-gradient(red,blue,yellow);
+}
+.gra-2{
+    width: 600px;
+    height: 160px;
+    background-image: linear-gradient(to top right,red,blue,green);
+}
+.gra-3{
+    width: 600px;
+    height: 160px;
+    background-image: linear-gradient(-90deg,red,blue,green);
+}
+.gra-4{
+    width: 600px;
+    height: 160px;
+    background-image: linear-gradient(red 25%,blue 25%);
+}
+.gra-5{
+    width: 600px;
+    height: 160px;
+    background-image: linear-gradient(red 25%,blue 25%,yellow 75%);
+}
+.gra-6{
+    width: 400px;
+    height: 160px;
+    margin: auto;
+    background-image: linear-gradient(60deg,rgba(0,0,0,.5), rgba(0,0,0,.9));
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.gra-6 div{
+    width: 400px;
+    height: 160px;
+    background-image: linear-gradient(45deg,rgba(255,255,255,0) 20%, rgba(255,255,255,.1),rgba(255,255,255,0) 80%);
+    border-radius: 10px;
+    position: absolute;
+    left: -400px;
+}
+/* .gra-6:hover > div{
+    position: absolute;
+    left: 800px;
+    transition: all 1.5s;
+} */
+.gra-6:hover > div{
+    animation: move 1s linear infinite;
+}
+@keyframes move{
+    from{
+        left: -400px;
+    }
+    to{
+        left: 800px;
+    }
+}
