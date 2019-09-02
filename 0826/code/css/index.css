@@ -1,0 +1,159 @@
+.banner{
+    height: 670px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.banner .banner-text{
+    width: 334px;
+    height: 266px;
+    position: absolute;
+    left: 236px;
+    top: 204px;
+}
+.banner .banner-text a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 分页器样式 */
+.swiper-pagination span{
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+}
+/* 轮播图结束 */
+
+
+/* 男女腕表展示 */
+.show-watch{
+    height: 710px;
+    background-image:url(../images/logo-bg.jpg);
+}
+.show-watch .left,
+.show-watch .right{
+    height: 710px;
+    float: left;
+}
+.show-watch .left{
+    width: 362px;
+    /* background-color: #f9c; */
+}
+.show-watch .left img{
+    width: 100%;
+    height: 100%;
+}
+.show-watch .right{
+    width: 1078px;
+}
+.show-watch .right .title{
+    width: 610px;
+    margin: 164px 0 108px 146px;
+    border-left: 1px solid #c2c1c1;
+    padding-left: 24px;
+}
+.show-watch .right .title h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.show-watch .right .title p{
+    font-size: 14px;
+    line-height: 24px;
+    color: #414141;
+}
+.show-watch > .right > div[class$="watch"]{
+    width: 274px;
+    float: left;
+}
+.show-watch .right .m-watch{
+    margin-left: 184px;
+}
+.show-watch .right .w-watch{
+    margin-left: 120px;
+}
+.show-watch > .right > div[class$="watch"] h2{
+    font-size: 20px;
+    line-height: 48px;
+}
+.show-watch > .right > div[class$="watch"] h3{
+    font-size: 16px;
+    line-height: 36px;
+    color: #3e3e3e;
+}
+.show-watch > .right > div[class$="watch"] p{
+    font-size: 10px;
+    line-height: 18px;
+    color: #787878;
+}
+.show-watch > .right > div[class$="watch"] img{
+   display: block;
+   margin: 30px auto 20px;
+   box-shadow: 0px 0px 1px 1px #eee;
+}
+.show-watch > .right > div[class$="watch"] a{
+    display: block;
+    text-align: center;
+    color: #000;
+}
+.show-watch > .right > div[class$="watch"]:hover img{
+    box-shadow: 0px 0px 14px 1px #eee;
+}
+.show-watch > .right > div[class$="watch"]:hover a{
+   color: #c5842d;
+}
+
+/* 商务男表 */
+.business-watch{
+    background-image: url(../images/logo-bg.jpg);
+    height: 712px;
+}
+.business-watch .title{
+    text-align: center;
+    /* background-color: #f9c; */
+    padding: 40px 0;
+}
+.business-watch .title h1{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.business-watch .title p{
+    font-size: 16px;
+}
+
+.business-watch .watch-box{
+    width: 1300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+    /* background-color: #f9c; */
+}
+.business-watch .watch-box .watch-list{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.business-watch .watch-list > li{
+    width: 260px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.business-watch .watch-list > li >h1{
+    font-size: 16px;
+    margin: 32px 0 46px;
+    visibility: hidden;
+}
+.business-watch .watch-list > li >img{
+    width: 200px;
+    height: 270px;
+}
+.business-watch .watch-list > li >p{
+    font-size: 12px;
+}
+.business-watch .watch-list > li:hover{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px #e5e4e3;
+}
+.business-watch .watch-list > li:hover h1{
+    visibility: visible;
+}
