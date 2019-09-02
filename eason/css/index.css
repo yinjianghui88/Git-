@@ -1,0 +1,343 @@
+/* 头部 */
+.header,
+.content,
+.footer{
+    width: 1440px;
+    margin: 0 auto;
+}
+.header .logo{
+    width: 1440px;
+    /* 内边距 上下16px 左右0 */
+    padding: 16px 0;
+    /* 背景图片 */
+    background-image: url(../img/logo-bg.jpg);
+    /* logo图片居中 */
+    text-align: center;
+}
+.header .nav{ /*导航*/
+    height: 44px;
+    background-color: #363636;
+}
+.header .nav-list{ /*导航nav-list*/
+    width: 820px;
+    margin: auto;
+    display: flex; /*弹性盒子*/
+    /* 弹性盒子元素之间用空白隔开 */
+    justify-content: space-between;
+}
+.header .nav-list>a{
+    width: 72px;
+    height: 42px;
+    /* background-color: #0c0; */
+    font-size: 14px;
+    /* 内容居中 */
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    /* 下边框 */
+    border-bottom: 2px solid transparent;
+}
+/* 伪类 */
+.header .nav-list>a:hover{
+    color: #c5842d;
+    border-color: #fff;
+    transition: all .8s ease;
+}
+/* 头部结束 */
+
+
+/* 内容部分 */
+/* 轮播图 */
+.content .banner{
+    width: 1440px;
+    height: 672px;
+}
+.content .banner .banner-list{
+    position: relative;
+}
+/* 图片大小 */
+.content .banner .banner-list>img{
+    width: 1440px;
+    height: 672px;
+}
+.content .banner .banner-text{
+    width: 330px;
+    height: 264px;
+    position: absolute;
+    top: 200px;
+    left: 230px;
+}
+/* 分页器(焦点) */
+.banner .swiper-pagination .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+
+
+/* 分类 */
+.content .type{
+    height: 710px;
+    background-image: url(../img/logo-bg.jpg);
+}
+.content .type>.left,
+.content .type>.right{
+    height: 710px;
+    float: left;
+}
+/* 左边 */
+.content .type>.left{
+    width: 362px;
+}
+.content .type .left>img{
+    width: 100%;
+    height: 100%;
+}
+/* 右边 */
+.content .type>.right{
+    width: 916px;
+    padding-left: 162px;
+}
+.content .type .right .title{
+    width: 596px;
+    border-left: 2px solid #c2c1c1;
+    padding-left: 24px;
+    margin: 146px 0 106px 0;
+}
+.content .type .title h1{
+    font-family: '微软雅黑';
+    font-size: 20px;
+}
+.content .type .title p{
+    font-family: '微软雅黑';
+    font-size: 14px;
+    color: #414141;
+    line-height: 24px;
+    margin-top: 14px;
+}
+/* 男女腕表 */
+.content .type .right .watch{
+    width: 270px;
+    float: left;
+}
+.content .type .right .watch h1{
+    font-size: 20px;
+    line-height: 48px;
+}
+.content .type .right .watch h2{
+    font-size: 16px;
+    line-height: 36px;
+    color: #3e3e3e;
+}
+.content .type .right .watch p{
+    font-size: 10px;
+    line-height: 18px;
+    color: #787878;
+}
+.content .type .right .watch img{
+    display: block;
+    margin: 40px auto 20px;
+}
+.content .type .right .watch a{
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: #000;
+}
+.content .type .right .man{
+    margin-left: 24px;
+}
+.content .type .right .women{
+    margin-left: 140px;
+}
+.content .type .watch:hover>img{
+    box-shadow: 0px 0px 20px 1px #c2c1c1;
+}
+.content .type .watch:hover>a{
+    color: #c5842d;
+}
+/* 精湛工艺 */
+.content .tech{
+    height: 700px;
+    position: relative;
+}
+.content .tech>img{
+    width: 100%;
+    height: 100%;
+}
+.content .tech .intro{
+    width: 310px;
+    position: absolute;
+    right: 220px;
+    top: 164px;
+}
+.content .tech .intro h1{
+    font-size: 24px;
+    color: #c5842d;
+}
+.content .tech .intro p{
+    font-size: 12px;
+    color: #dadada;
+    
+    margin: 30px 0;
+    line-height: 22px;
+}
+.content .tech .intro a{
+    font-size: 14px;
+    padding: 7px 27px;
+    border: 1px solid #c5842d;
+    color: #c5842d;
+    float: right;
+}
+
+/* 商务男表 */
+.content .man-watch{
+    height: 712px;
+    background-image: url(../img/logo-bg.jpg);
+}
+.content .man-watch .describe{
+    padding-top: 42px;
+    text-align: center;
+}
+.content .man-watch .describe h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.content .man-watch .describe p{
+    font-size: 16px;
+}
+
+.content .man-watch .watch-container{
+    width: 1300px;
+    margin: auto;
+    position: relative;
+}
+.content .man-watch .watch-list{
+    width: 1140px;
+    margin: 36px auto 30px;    
+    display: flex;
+    justify-content: center;
+	aligin-items: center;
+    padding: 10px;
+}
+.content .watch-list .watch-box{
+    text-align: center;
+    padding: 30px 0 50px;
+    border-radius: 4px;
+}
+.content .watch-list .watch-box h1{
+    font-size: 16px;
+    /* 透明度 */
+    opacity: 0;
+}
+.content .watch-list .watch-box:hover h1{
+    opacity: 1;
+    transition: opacity .7s ease;
+}
+.content .watch-list .watch-box:hover{
+    box-shadow: 0px 0px 16px 1px #aaa;
+    margin-top: -4px;
+    transition: all .6s ease;
+}
+
+.content .watch-list .watch-box img{
+    margin: 46px 0 10px;
+    height: 274px;
+}
+.content .watch-list .watch-box p{
+    font-size: 12px;
+}
+.content .watch-container div[class^="swiper-button"]{
+    font-size: 80px;
+    font-weight: bold;
+    background: none;
+    color: #A7A4A4;
+    margin-top: -50px;
+    /* 去掉选中时的蓝色边框 */
+    outline: none;
+}
+
+
+/* 选择表款 */
+.content .choose{
+    height: 740px;
+    position: relative;
+}
+.content .choose img{
+    width: 100%;
+    height: 100%;
+}
+.content .choose .text{
+    width: 600px;
+    text-align: center;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+}
+.content .choose .text h1{
+    color: #fff;
+    font-size: 48px;
+}
+.content .choose .text h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: normal;
+}
+.content .choose .text a{
+    color: #c5842d;
+    display: block;
+    font-size: 18px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto;
+    border: 1px solid #c5842d;
+}
+
+
+/* 页脚 */
+.footer{
+    background-color: #000;
+    overflow: hidden;
+    border-top: 1px solid #c5842d;
+}
+/* 链接 */
+.footer .link{
+    width: 1000px;
+    margin: 70px auto 50px;
+    /* 弹性盒子 */
+    display: flex;
+    justify-content: space-between;
+}
+/* 第一个li样式 */
+.footer .link-list li:first-child{
+    font-size: 18px;
+    line-height: 36px;
+    color: #cdcccc;
+    margin-bottom:10px;
+}
+.footer .link-list li{
+    text-align: center;
+}
+.footer .link-list li a{
+    font-size: 12px;
+    line-height: 23px;
+    color: #858585;
+}
+/* 地址 */
+.footer .addr{
+    height: 46px;
+    background-color: #1e1e1e;
+}
+.footer .addr>ul{
+    width: 1000px;
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+}
+.footer .addr>ul>li{
+    color: #b1b1ae;
+    font-size: 12px;
+    line-height: 46px;
+}
